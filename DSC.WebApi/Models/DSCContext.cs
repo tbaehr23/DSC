@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+// ReSharper disable InconsistentNaming
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 
 namespace DSC.WebApi.Models
 {

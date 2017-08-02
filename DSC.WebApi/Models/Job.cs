@@ -1,4 +1,5 @@
-﻿namespace DSC.WebApi.Models
+﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
+namespace DSC.WebApi.Models
 {
     public class Job
     {
