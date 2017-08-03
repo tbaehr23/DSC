@@ -7,6 +7,7 @@ using Xunit;
 
 namespace DSC.WebApi.Test.JobController
 {
+    [Collection("DSC")]
     public class When_Get_without_parameter_executes
     {
         private readonly IActionResult _result;

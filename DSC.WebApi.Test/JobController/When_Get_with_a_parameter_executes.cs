@@ -6,6 +6,7 @@ using Xunit;
 
 namespace DSC.WebApi.Test.JobController
 {
+    [Collection("DSC")]
     public class When_Get_with_a_parameter_executes
     {
 
