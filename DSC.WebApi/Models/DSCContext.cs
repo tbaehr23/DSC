@@ -8,8 +8,8 @@ namespace DSC.WebApi.Models
     {
         public DSCContext(DbContextOptions<DSCContext> options):base(options)
         {
-            
         }
+
         public DbSet<Job> Jobs { get; set; }
     }
 }

@@ -15,16 +15,9 @@ namespace DSC.WebApi.Controllers
         {
             _context = context;
 
-            if (!_context.Jobs.Any())
-            {
-                _context.Jobs.AddRange(
-                    new Job { Name = "Job1", IsCompleted = false },
-                    new Job { Name = "Job2", IsCompleted = true }
-                    );
-                _context.SaveChanges();
-            }
-
+            DSCContextFactory.InitializeDatabase(context);
         }
+
         // GET: api/values
         [HttpGet]
         public IActionResult Get()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using DSC.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
@@ -39,7 +40,8 @@ namespace DSC.WebApi.Test.JobController
 
                 Assert.IsType<Job>(data);
 
-                Assert.True(data.Name == "Job" + id);
+                var seedDataJob = SeedData.Jobs().FirstOrDefault(j => j.Name.EndsWith(id.ToString()));
+                Assert.True(data.Name == seedDataJob.Name);
             }
         }
 

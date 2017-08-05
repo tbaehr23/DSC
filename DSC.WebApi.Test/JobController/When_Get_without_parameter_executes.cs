@@ -40,8 +40,8 @@ namespace DSC.WebApi.Test.JobController
 
             Assert.All(_jobs, j => Assert.IsType<Job>(j));
 
-            Assert.True(_jobs.Count() == 2, "There are not 2 jobs");
-
+            var seedDataCount = SeedData.Jobs().Count();
+            Assert.True(_jobs.Count() == seedDataCount, "There are not " + seedDataCount + " jobs");
         }
     }
 }
