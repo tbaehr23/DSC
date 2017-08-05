@@ -1,0 +1,52 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace DSC.WebApi.Models
+{
+    public class JobRepository
+    {
+        private readonly DSCContext _context;
+
+        public JobRepository(DSCContext context)
+        {
+            _context = context;
+
+            DSCContextFactory.InitializeDatabase(context);
+        }
+
+        public IEnumerable<Job> GetList()
+        {
+            return _context.Jobs.ToArray();
+        }
+
+        public Job GetById(int id)
+        {
+            return _context.Jobs.Find(id);
+        }
+
+
+        public Job Save(Job jobToSave)
+        {
+            if (jobToSave.Id == 0)
+            {
+                _context.Add(jobToSave);
+            }
+            else
+            {
+                Mapper.Map(jobToSave, _context.Jobs.Find(jobToSave.Id));
+            }
+
+            _context.SaveChanges();
+
+            return jobToSave; 
+        }
+
+        public Job Delete(Job jobToDelete)
+        {
+            _context.Remove(_context.Jobs.Find(jobToDelete.Id));
+            _context.SaveChanges();
+
+            return jobToDelete;
+        }
+    }
+}
