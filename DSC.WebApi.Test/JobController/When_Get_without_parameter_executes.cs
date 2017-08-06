@@ -17,7 +17,7 @@ namespace DSC.WebApi.Test.JobController
         {
             using (var context = DSCContextFactory.InMemoryContext())
             {
-                var controller = new Controllers.JobController(context);
+                var controller = new Controllers.JobController(new Models.JobRepository(context));
 
                 _result = controller.Get();
 

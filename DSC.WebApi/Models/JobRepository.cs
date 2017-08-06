@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DSC.WebApi.Models
 {
-    public class JobRepository
+    public class JobRepository : IJobRepository
     {
         private readonly DSCContext _context;
 
@@ -23,7 +23,6 @@ namespace DSC.WebApi.Models
         {
             return _context.Jobs.Find(id);
         }
-
 
         public Job Save(Job jobToSave)
         {

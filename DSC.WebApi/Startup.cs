@@ -27,6 +27,8 @@ namespace DSC.WebApi
         {
             // Add framework services.
             services.AddDbContext<DSCContext>(opt => opt.UseInMemoryDatabase());
+            services.AddScoped<IJobRepository, JobRepository>();
+
             services.AddMvc();
         }
 

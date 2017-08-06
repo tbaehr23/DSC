@@ -19,7 +19,7 @@ namespace DSC.WebApi.Test.JobController
         {
             using (var context = DSCContextFactory.InMemoryContext())
             {
-                var controller = new Controllers.JobController(context);
+                var controller = new Controllers.JobController(new Models.JobRepository(context));
 
                 var result = controller.Get(id);
 
@@ -32,7 +32,7 @@ namespace DSC.WebApi.Test.JobController
         {
             using (var context = DSCContextFactory.InMemoryContext())
             {
-                var controller = new Controllers.JobController(context);
+                var controller = new Controllers.JobController(new Models.JobRepository(context));
 
                 var result = controller.Get(id);
 
