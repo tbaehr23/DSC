@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using DSC.Database.Domain;
 using DSC.WebApi.Models;
 using Xunit;
 // ReSharper disable InconsistentNaming

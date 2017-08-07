@@ -1,5 +1,5 @@
 ﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
-namespace DSC.WebApi.Models
+namespace DSC.Database.Domain
 {
     public class Job
     {

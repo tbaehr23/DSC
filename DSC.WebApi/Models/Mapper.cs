@@ -1,4 +1,6 @@
-﻿namespace DSC.WebApi.Models
+﻿using DSC.Database.Domain;
+
+namespace DSC.WebApi.Models
 {
     internal static class Mapper
     {

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSC.WebApi", "DSC.WebApi\DS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSC.WebApi.Test", "DSC.WebApi.Test\DSC.WebApi.Test.csproj", "{C1E47276-34DC-4A40-B84D-67D25FB8FBF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSC.Database", "DSC.Database\DSC.Database.csproj", "{3ECB8489-B587-4977-8908-ABCE313F96F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C1E47276-34DC-4A40-B84D-67D25FB8FBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1E47276-34DC-4A40-B84D-67D25FB8FBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1E47276-34DC-4A40-B84D-67D25FB8FBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECB8489-B587-4977-8908-ABCE313F96F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECB8489-B587-4977-8908-ABCE313F96F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECB8489-B587-4977-8908-ABCE313F96F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECB8489-B587-4977-8908-ABCE313F96F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

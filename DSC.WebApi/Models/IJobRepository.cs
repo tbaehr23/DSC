@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DSC.Database.Domain;
 
 namespace DSC.WebApi.Models
 {

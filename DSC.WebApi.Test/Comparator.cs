@@ -1,4 +1,5 @@
-﻿using DSC.WebApi.Models;
+﻿using DSC.Database.Domain;
+using DSC.WebApi.Models;
 
 namespace DSC.WebApi.Test
 {
