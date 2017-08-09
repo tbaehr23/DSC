@@ -12,8 +12,6 @@ namespace DSC.WebApi.Models
         public JobRepository(DSCContext context)
         {
             _context = context;
-
-            DSCContextFactory.InitializeDatabase(context);
         }
 
         public IEnumerable<Job> GetList()
