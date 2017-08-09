@@ -1,8 +1,8 @@
-﻿using DSC.Database;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+
 // ReSharper disable InconsistentNaming
 
-namespace DSC.WebApi
+namespace DSC.Database.Initialize
 {
     public static class DSCContextFactory
     {
@@ -10,7 +10,11 @@ namespace DSC.WebApi
         {
             var optionInMemory = new DbContextOptionsBuilder<DSCContext>().UseInMemoryDatabase().Options;
 
-            return new DSCContext(optionInMemory);
+            var context = new DSCContext(optionInMemory);
+
+            Initializer.PopulateDatabaseWithSeedData(context);
+
+            return context;
         }
     }
 }

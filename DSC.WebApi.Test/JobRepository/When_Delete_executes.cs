@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using DSC.Database.Domain;
+using DSC.Database.Initialize;
 using DSC.WebApi.Models;
 using Xunit;
 

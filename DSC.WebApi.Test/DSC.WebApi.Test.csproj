@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DSC.Database.Initialize\DSC.Database.Initialize.csproj" />
     <ProjectReference Include="..\DSC.WebApi\DSC.WebApi.csproj" />
   </ItemGroup>
 

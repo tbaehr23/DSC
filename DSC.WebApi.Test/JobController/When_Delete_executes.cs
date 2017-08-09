@@ -1,4 +1,5 @@
 ﻿using System;
+using DSC.Database.Initialize;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 // ReSharper disable InconsistentNaming
