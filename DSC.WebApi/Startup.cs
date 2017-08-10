@@ -27,7 +27,8 @@ namespace DSC.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddDbContext<DSCContext>(opt => opt.UseInMemoryDatabase());
+            services.AddDbContext<DSCContext>(opt => 
+                opt.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=DSC;Integrated Security=True;"));
             services.AddScoped<IJobRepository, JobRepository>();
 
             services.AddMvc();
