@@ -1,0 +1,24 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        <h2>{{ pageTitle }}</h2>
+    </div>
+
+    <div *ngIf='error'>{{error}}</div>
+
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class='table' *ngIf="jobs && jobs.length">
+                <thead>
+                    <th>Name</th>
+                    <th>Is Complete</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let job of jobs">
+                        <td>{{job.name}}</td>
+                        <td>{{job.isCompleted}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
