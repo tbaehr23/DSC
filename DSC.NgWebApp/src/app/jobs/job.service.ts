@@ -1,30 +1,29 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
 
 import { Job } from './job'
 
 @Injectable()
 export class JobService {
 
-    constructor( private _http: Http){}
+   constructor( private _http: Http){}
 
-    
-    private jobsUrl = 'api/jobs';  // URL to angular-in-memory-web-api
+   
+    private jobsUrl: string = 'http://localhost:59700/api/job';
 
-    getJobs(): Promise<Job[]> {
-        
+    getJobs(): Promise<Job[]>{
         return this._http.get(this.jobsUrl)
+                .map(response => response.json())
                 .toPromise()
-                .then(response => response.json().data as Job[])
                 .catch(this.handleError);
     }
-
+ 
+   
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);
     }
-
-
 }
