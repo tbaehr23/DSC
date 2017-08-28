@@ -6,7 +6,8 @@ import { JobService } from './job.service';
 
 @Component({
     selector: 'job-list',
-    templateUrl: './job-list.component.html'
+    templateUrl: './job-list.component.html',
+    styleUrls: ['./job-list.component.css']
 })
 export class JobListComponent implements OnInit{
 
